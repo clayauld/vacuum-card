@@ -11,7 +11,8 @@
     "charging": "Charging",
     "returning home": "Returning Home",
     "returning": "Returning Home",
-    "docked": "Docked"
+    "docked": "Docked",
+    "unknown": "Unknown"
   },
   "source": {
     "gentle": "Gentle",
