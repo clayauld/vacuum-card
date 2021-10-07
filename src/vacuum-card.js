@@ -5,6 +5,13 @@ import './vacuum-card-editor';
 import localize from './localize';
 import styles from './styles';
 import defaultImage from './vacuum.png';
+import { version } from '../package.json';
+
+console.info(
+  `%c VACUUM-CARD %c ${version} `,
+  'color: white; background: blue; font-weight: 700;',
+  'color: blue; background: white; font-weight: 700;'
+);
 
 if (!customElements.get('ha-icon-button')) {
   customElements.define(
@@ -100,7 +107,7 @@ class VacuumCard extends LitElement {
   }
 
   getCardSize() {
-    return 2;
+    return this.config.compact_view || false ? 3 : 8;
   }
 
   shouldUpdate(changedProps) {
